@@ -435,7 +435,11 @@ const pageContent = {
                     { number: '100%', label: 'Digital Coverage' },
                     { number: '0%', label: 'Integration Cost' }
                 ],
-                highlight: "Be part of Baltimore's fastest-growing cannabis delivery network. Our platform is designed to enhance your business while maintaining the highest standards of compliance and security."
+                highlight: "Be part of Baltimore's fastest-growing cannabis delivery network. Our platform is designed to enhance your business while maintaining the highest standards of compliance and security.",
+                cta: {
+                    text: "Contact Us",
+                    link: "mailto:contact@thegrassapp.com"
+                }
             },
             {
                 title: "Exclusive Partnership Benefits",
@@ -453,7 +457,7 @@ const pageContent = {
                     { number: '100%', label: 'Secure Payments' }
                 ],
                 cta: {
-                    text: "Partner With Us Today",
+                    text: "Contact Us",
                     link: "mailto:contact@thegrassapp.com"
                 }
             }
