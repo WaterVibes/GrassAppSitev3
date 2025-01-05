@@ -927,11 +927,31 @@ try {
                     const topLogo = document.querySelector('.top-left-logo');
                     
                     if (navPanel) {
+                        // Add animation styles for nav panel
+                        const animStyle = document.createElement('style');
+                        animStyle.textContent = `
+                            @keyframes slideInFromRight {
+                                0% {
+                                    transform: translate(100%, -50%);
+                                    opacity: 0;
+                                }
+                                100% {
+                                    transform: translate(0, -50%);
+                                    opacity: 1;
+                                }
+                            }
+                            .nav-panel.visible {
+                                animation: slideInFromRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                            }
+                        `;
+                        document.head.appendChild(animStyle);
+                        
                         // Add a slight delay for the nav panel to create a sequence
                         setTimeout(() => {
                             navPanel.classList.add('visible');
-                        }, 300); // Delay the nav panel appearance by 300ms after the loading screen starts fading
+                        }, 300);
                     }
+                    
                     if (topLogo) {
                         requestAnimationFrame(() => {
                             topLogo.classList.add('visible');
