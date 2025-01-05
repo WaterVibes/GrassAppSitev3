@@ -705,7 +705,7 @@ function collapseNavPanel() {
             cursor: pointer;
             touch-action: manipulation;
             z-index: 1001;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgb(0, 0, 0);
             border-radius: 50%;
             border: 2px solid rgba(0, 255, 0, 0.5);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -721,7 +721,7 @@ function collapseNavPanel() {
             transition: all 0.3s ease;
         }
         .nav-panel.collapsed .nav-panel-clickable:hover {
-            background: rgba(0, 0, 0, 1);
+            background: rgb(0, 0, 0);
             border-color: rgba(0, 255, 0, 0.8);
             transform: translateY(-50%) scale(1.1);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
