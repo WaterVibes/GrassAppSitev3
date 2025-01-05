@@ -1,0 +1,24 @@
+{
+    "camera": {
+        "x": "220.56",
+        "y": "210.78",
+        "z": "420.34"
+    },
+    "target": {
+        "x": "215.89",
+        "y": "205.45",
+        "z": "415.67"
+    },
+    "title": "Mount Vernon",
+    "description": "Experience Mount Vernon, Baltimore's cultural heart and historic district.",
+    "cards": [
+        {
+            "title": "Cultural District",
+            "content": "Home to museums, theaters, and the iconic Washington Monument, Mount Vernon is Baltimore's cultural center."
+        },
+        {
+            "title": "Delivery Coverage",
+            "content": "Full cannabis delivery service available throughout the Mount Vernon cultural district."
+        }
+    ]
+} 

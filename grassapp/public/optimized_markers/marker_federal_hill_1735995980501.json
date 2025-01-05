@@ -1,0 +1,24 @@
+{
+    "camera": {
+        "x": "150.78",
+        "y": "190.34",
+        "z": "550.23"
+    },
+    "target": {
+        "x": "145.45",
+        "y": "185.67",
+        "z": "545.89"
+    },
+    "title": "Federal Hill",
+    "description": "Welcome to Federal Hill, offering stunning views of the Inner Harbor and a rich neighborhood culture.",
+    "cards": [
+        {
+            "title": "Federal Hill Park",
+            "content": "Visit the historic park overlooking Baltimore's Inner Harbor, offering panoramic views of the city."
+        },
+        {
+            "title": "Neighborhood Service",
+            "content": "Reliable cannabis delivery service covering the entire Federal Hill area."
+        }
+    ]
+} 

@@ -1,0 +1,24 @@
+{
+    "camera": {
+        "x": "300.23",
+        "y": "160.89",
+        "z": "440.45"
+    },
+    "target": {
+        "x": "295.67",
+        "y": "155.23",
+        "z": "435.78"
+    },
+    "title": "Delivery Driver",
+    "description": "Join our team of professional cannabis delivery drivers in Baltimore.",
+    "cards": [
+        {
+            "title": "Driver Opportunities",
+            "content": "Learn about becoming a GrassApp delivery driver and enjoy flexible hours, competitive pay, and a supportive work environment."
+        },
+        {
+            "title": "Requirements & Benefits",
+            "content": "Find out about driver requirements, training, and the comprehensive benefits package we offer to our delivery team."
+        }
+    ]
+} 

@@ -1,0 +1,24 @@
+{
+    "camera": {
+        "x": "280.45",
+        "y": "220.67",
+        "z": "500.23"
+    },
+    "target": {
+        "x": "275.78",
+        "y": "215.34",
+        "z": "495.89"
+    },
+    "title": "Medical Patient",
+    "description": "Information for medical cannabis patients in Baltimore.",
+    "cards": [
+        {
+            "title": "Patient Services",
+            "content": "Learn about our specialized services for medical cannabis patients, including priority delivery and personalized consultations."
+        },
+        {
+            "title": "Medical Program",
+            "content": "Information about Maryland's medical cannabis program and how to become a registered patient."
+        }
+    ]
+} 
