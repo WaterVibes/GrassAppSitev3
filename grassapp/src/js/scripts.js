@@ -536,6 +536,12 @@ function showInfoCard(pageName) {
     card.className = `info-card ${pageName}-card`;
     if (pageName === 'aboutUs') card.classList.add('about-us-card');
     
+    // Set position to center of screen
+    card.style.position = 'fixed';
+    card.style.top = '50%';
+    card.style.left = '50%';
+    card.style.transform = 'translate(-50%, -50%)';
+    
     // Create and append icon/logo
     if (cardInfo.icon) {
         const iconContainer = document.createElement('div');
