@@ -22,18 +22,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Install Dependencies
+        run: |
+          cd grassapp
+          npm install
+          
+      - name: Build
+        run: |
+          cd grassapp
+          npm run build
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          static_site_generator: "html"
-          
-      - name: List contents
-        run: ls -la grassapp
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: 'grassapp'
+          path: 'grassapp/dist'
 
   deploy:
     needs: build
