@@ -1,13 +1,13 @@
 {
     "camera": {
-        "x": "150.78",
-        "y": "190.34",
-        "z": "550.23"
+        "x": "-200",
+        "y": "200",
+        "z": "0"
     },
     "target": {
-        "x": "145.45",
-        "y": "185.67",
-        "z": "545.89"
+        "x": "-200",
+        "y": "0",
+        "z": "0"
     },
     "title": "Federal Hill",
     "description": "Welcome to Federal Hill, offering stunning views of the Inner Harbor and a rich neighborhood culture.",

@@ -1,13 +1,13 @@
 {
     "camera": {
-        "x": "350.12",
-        "y": "180.45",
-        "z": "520.89"
+        "x": "300",
+        "y": "200",
+        "z": "300"
     },
     "target": {
-        "x": "345.67",
-        "y": "178.23",
-        "z": "515.34"
+        "x": "300",
+        "y": "0",
+        "z": "300"
     },
     "title": "Canton",
     "description": "Welcome to Canton, one of Baltimore's most charming waterfront neighborhoods!",

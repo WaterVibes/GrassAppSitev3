@@ -1,13 +1,13 @@
 {
     "camera": {
-        "x": "280.45",
-        "y": "220.67",
-        "z": "500.23"
+        "x": "300",
+        "y": "400",
+        "z": "-300"
     },
     "target": {
-        "x": "275.78",
-        "y": "215.34",
-        "z": "495.89"
+        "x": "300",
+        "y": "0",
+        "z": "-300"
     },
     "title": "Medical Patient",
     "description": "Information for medical cannabis patients in Baltimore.",

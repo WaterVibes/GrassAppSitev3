@@ -1,13 +1,13 @@
 {
     "camera": {
-        "x": "220.56",
-        "y": "210.78",
-        "z": "420.34"
+        "x": "0",
+        "y": "200",
+        "z": "-300"
     },
     "target": {
-        "x": "215.89",
-        "y": "205.45",
-        "z": "415.67"
+        "x": "0",
+        "y": "0",
+        "z": "-300"
     },
     "title": "Mount Vernon",
     "description": "Experience Mount Vernon, Baltimore's cultural heart and historic district.",

@@ -1,13 +1,13 @@
 {
     "camera": {
-        "x": "320.78",
-        "y": "190.45",
-        "z": "460.89"
+        "x": "-300",
+        "y": "400",
+        "z": "-300"
     },
     "target": {
-        "x": "315.34",
-        "y": "185.67",
-        "z": "455.23"
+        "x": "-300",
+        "y": "0",
+        "z": "-300"
     },
     "title": "Partner With Us",
     "description": "Join GrassApp as a business partner in Baltimore's cannabis community.",

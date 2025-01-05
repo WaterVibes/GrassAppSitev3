@@ -1,13 +1,13 @@
 {
     "camera": {
-        "x": "300.23",
-        "y": "160.89",
-        "z": "440.45"
+        "x": "-300",
+        "y": "200",
+        "z": "300"
     },
     "target": {
-        "x": "295.67",
-        "y": "155.23",
-        "z": "435.78"
+        "x": "-300",
+        "y": "0",
+        "z": "300"
     },
     "title": "Delivery Driver",
     "description": "Join our team of professional cannabis delivery drivers in Baltimore.",

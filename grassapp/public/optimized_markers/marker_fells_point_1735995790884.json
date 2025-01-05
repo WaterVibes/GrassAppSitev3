@@ -1,13 +1,13 @@
 {
     "camera": {
-        "x": "400.45",
-        "y": "170.23",
-        "z": "480.67"
+        "x": "200",
+        "y": "200",
+        "z": "300"
     },
     "target": {
-        "x": "395.78",
-        "y": "165.45",
-        "z": "475.12"
+        "x": "200",
+        "y": "0",
+        "z": "300"
     },
     "title": "Fells Point",
     "description": "Discover historic Fells Point, known for its maritime history and vibrant community.",

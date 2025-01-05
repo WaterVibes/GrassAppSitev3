@@ -1,13 +1,13 @@
 {
     "camera": {
-        "x": "196.97",
-        "y": "156.96",
-        "z": "630.37"
+        "x": "0",
+        "y": "200",
+        "z": "500"
     },
     "target": {
-        "x": "191.44",
-        "y": "154.81",
-        "z": "622.32"
+        "x": "0",
+        "y": "0",
+        "z": "0"
     },
     "title": "Baltimore Inner Harbor",
     "description": "Welcome to Baltimore's iconic Inner Harbor! This historic seaport serves as a cultural hub and tourist destination.",

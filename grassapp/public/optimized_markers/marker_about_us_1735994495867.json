@@ -1,13 +1,13 @@
 {
     "camera": {
-        "x": "250.34",
-        "y": "200.56",
-        "z": "580.78"
+        "x": "0",
+        "y": "500",
+        "z": "500"
     },
     "target": {
-        "x": "245.89",
-        "y": "198.34",
-        "z": "575.23"
+        "x": "0",
+        "y": "0",
+        "z": "0"
     },
     "title": "About Us",
     "description": "Learn about GrassApp's mission and commitment to the Baltimore community.",
