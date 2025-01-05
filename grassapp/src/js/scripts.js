@@ -668,15 +668,16 @@ function collapseNavPanel() {
             visibility: visible !important;
             opacity: 1 !important;
             pointer-events: auto !important;
-            transition: visibility 0s, opacity 0.5s ease !important;
+            transition: none !important;
         }
         .nav-panel.collapsed {
             transform: translate(calc(100% - 60px), -50%);
             pointer-events: none;
             touch-action: none;
-            background: transparent;
+            background: none;
             border: none;
             box-shadow: none;
+            transition: none;
         }
         .nav-panel.collapsed * {
             pointer-events: none;
@@ -687,12 +688,12 @@ function collapseNavPanel() {
             visibility: hidden;
             pointer-events: none;
             touch-action: none;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transition: none;
         }
         .nav-panel.collapsed .nav-section h3 {
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transition: none;
         }
         .nav-panel.collapsed .nav-panel-clickable {
             position: absolute;
@@ -709,7 +710,7 @@ function collapseNavPanel() {
             border-radius: 50%;
             border: 2px solid #00ff00;
             box-shadow: none;
-            transition: all 0.3s ease;
+            transition: none;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -718,7 +719,7 @@ function collapseNavPanel() {
             content: '☰';
             color: #00ff00;
             font-size: 24px;
-            transition: all 0.3s ease;
+            transition: none;
         }
         .nav-panel.collapsed .nav-panel-clickable:hover {
             background: #000000;
