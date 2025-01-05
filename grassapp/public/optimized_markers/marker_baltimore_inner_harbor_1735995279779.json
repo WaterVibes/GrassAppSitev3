@@ -1,0 +1,24 @@
+{
+    "camera": {
+        "x": "196.97",
+        "y": "156.96",
+        "z": "630.37"
+    },
+    "target": {
+        "x": "191.44",
+        "y": "154.81",
+        "z": "622.32"
+    },
+    "title": "Baltimore Inner Harbor",
+    "description": "Welcome to Baltimore's iconic Inner Harbor! This historic seaport serves as a cultural hub and tourist destination.",
+    "cards": [
+        {
+            "title": "Inner Harbor Highlights",
+            "content": "Experience the vibrant atmosphere of Baltimore's most famous attraction, featuring waterfront dining, shopping, and entertainment."
+        },
+        {
+            "title": "Local Services",
+            "content": "Discover our convenient cannabis delivery services in the Inner Harbor area, with quick and discreet delivery options."
+        }
+    ]
+} 

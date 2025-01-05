@@ -1,0 +1,24 @@
+{
+    "camera": {
+        "x": "250.34",
+        "y": "200.56",
+        "z": "580.78"
+    },
+    "target": {
+        "x": "245.89",
+        "y": "198.34",
+        "z": "575.23"
+    },
+    "title": "About Us",
+    "description": "Learn about GrassApp's mission and commitment to the Baltimore community.",
+    "cards": [
+        {
+            "title": "Our Mission",
+            "content": "GrassApp is dedicated to providing safe, reliable, and convenient cannabis delivery services to the Baltimore community."
+        },
+        {
+            "title": "Community Focus",
+            "content": "We're more than just a delivery service - we're your local cannabis community partner, committed to education and responsible service."
+        }
+    ]
+} 
