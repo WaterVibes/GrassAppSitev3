@@ -671,7 +671,7 @@ function collapseNavPanel() {
             transition: visibility 0s, opacity 0.5s ease !important;
         }
         .nav-panel.collapsed {
-            transform: translate(calc(100% - 40px), -50%);
+            transform: translate(calc(100% - 15px), -50%);
             pointer-events: none;
             touch-action: none;
             background: transparent;
@@ -698,7 +698,7 @@ function collapseNavPanel() {
             position: absolute;
             left: 0;
             top: 0;
-            width: 40px;
+            width: 15px;
             height: 100%;
             pointer-events: auto;
             cursor: pointer;
@@ -759,14 +759,14 @@ function collapseNavPanel() {
                 max-height: 85vh;
             }
             .nav-panel.collapsed {
-                transform: translate(calc(100% - 35px), -50%);
+                transform: translate(calc(100% - 12px), -50%);
             }
             .nav-panel.collapsed .nav-button,
             .nav-panel.collapsed .nav-section h3 {
                 display: none;
             }
             .nav-panel.collapsed .nav-panel-clickable {
-                width: 35px;
+                width: 12px;
             }
             .nav-panel.expanded {
                 transform: translate(0, -50%);
