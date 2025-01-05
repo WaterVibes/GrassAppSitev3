@@ -16,7 +16,7 @@ window.showPage = showPageImpl;
 // Get loading elements
 const loadingScreen = document.querySelector('.loading-screen');
 const loadingProgress = document.querySelector('.loading-progress');
-const topLogo = document.querySelector('.top-logo');
+const topLogo = document.querySelector('.top-left-logo');
 const navPanel = document.querySelector('.nav-panel');
 
 // Add initial hidden state for UI elements at the start of the file
@@ -61,6 +61,19 @@ topLeftLogo.target = '_blank';
 topLeftLogo.className = 'top-left-logo';
 topLeftLogo.innerHTML = '<img src="./img/Logo.png" alt="GrassApp Logo">';
 document.body.appendChild(topLeftLogo);
+
+// Create loading screen
+const loadingScreenElement = document.createElement('div');
+loadingScreenElement.className = 'loading-screen';
+loadingScreenElement.innerHTML = `
+    <div class="loading-content">
+        <img src="./img/Logo.png" alt="GrassApp Logo" class="loading-logo">
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+`;
+document.body.appendChild(loadingScreenElement);
 
 // Initialize scene and camera
 scene = new THREE.Scene();
@@ -921,50 +934,30 @@ try {
             
             scene.add(model);
 
-            // Hide loading screen first
-            if (loadingScreen) {
-                loadingScreen.classList.add('hidden');
-                
-                // Show UI elements after loading screen starts fading
-                setTimeout(() => {
-                    const navPanel = document.querySelector('.nav-panel');
-                    const topLogo = document.querySelector('.top-left-logo');
+            // Hide loading screen with a delay
+            setTimeout(() => {
+                const loadingScreen = document.querySelector('.loading-screen');
+                if (loadingScreen) {
+                    loadingScreen.classList.add('hidden');
                     
-                    if (navPanel) {
-                        // Add animation styles for nav panel
-                        const animStyle = document.createElement('style');
-                        animStyle.textContent = `
-                            @keyframes slideInFromRight {
-                                0% {
-                                    transform: translate(100%, -50%);
-                                    opacity: 0;
-                                }
-                                100% {
-                                    transform: translate(0, -50%);
-                                    opacity: 1;
-                                }
-                            }
-                            .nav-panel.visible {
-                                animation: slideInFromRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-                            }
-                        `;
-                        document.head.appendChild(animStyle);
+                    // Show UI elements after loading screen starts fading
+                    setTimeout(() => {
+                        const navPanel = document.querySelector('.nav-panel');
+                        const topLogo = document.querySelector('.top-left-logo');
                         
-                        // Add a slight delay for the nav panel to create a sequence
-                        setTimeout(() => {
+                        if (navPanel) {
                             navPanel.classList.add('visible');
-                        }, 300);
-                    }
-                    
-                    if (topLogo) {
-                        requestAnimationFrame(() => {
+                        }
+                        
+                        if (topLogo) {
                             topLogo.classList.add('visible');
-                        });
-                    }
-                    // Start automatic camera movement
-                    startAutoMove();
-                }, 1000);
-            }
+                        }
+                        
+                        // Start automatic camera movement
+                        startAutoMove();
+                    }, 500);
+                }
+            }, 1000);
         },
         (progress) => {
             if (loadingProgress) {
@@ -974,12 +967,7 @@ try {
             }
         },
         (error) => {
-            console.error('Detailed error loading model:', {
-                message: error.message,
-                stack: error.stack,
-                type: error.type,
-                url: error.target?.responseURL || 'No URL available'
-            });
+            console.error('Error loading model:', error);
             showError('Failed to load 3D model', error.message);
         }
     );
