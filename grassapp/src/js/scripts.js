@@ -671,7 +671,7 @@ function collapseNavPanel() {
             transition: visibility 0s, opacity 0.5s ease !important;
         }
         .nav-panel.collapsed {
-            transform: translate(calc(100% - 25px), -50%);
+            transform: translate(calc(100% - 60px), -50%);
             pointer-events: none;
             touch-action: none;
             background: transparent;
@@ -696,21 +696,38 @@ function collapseNavPanel() {
         }
         .nav-panel.collapsed .nav-panel-clickable {
             position: absolute;
-            left: 0;
-            top: 0;
-            width: 25px;
-            height: 100%;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 60px;
             pointer-events: auto;
             cursor: pointer;
             touch-action: manipulation;
             z-index: 1001;
             background: rgba(0, 0, 0, 0.95);
-            border-left: 2px solid rgba(0, 255, 0, 0.5);
+            border-radius: 50%;
+            border: 2px solid rgba(0, 255, 0, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-panel.collapsed .nav-panel-clickable::before {
+            content: '☰';
+            color: rgba(0, 255, 0, 0.8);
+            font-size: 24px;
             transition: all 0.3s ease;
         }
         .nav-panel.collapsed .nav-panel-clickable:hover {
             background: rgba(0, 0, 0, 1);
-            border-left: 2px solid rgba(0, 255, 0, 0.8);
+            border-color: rgba(0, 255, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+        .nav-panel.collapsed .nav-panel-clickable:hover::before {
+            color: rgba(0, 255, 0, 1);
         }
         @media (max-width: 768px) {
             .nav-panel {
@@ -720,14 +737,16 @@ function collapseNavPanel() {
                 max-height: 85vh;
             }
             .nav-panel.collapsed {
-                transform: translate(calc(100% - 35px), -50%);
+                transform: translate(calc(100% - 50px), -50%);
             }
             .nav-panel.collapsed .nav-button,
             .nav-panel.collapsed .nav-section h3 {
                 display: none;
             }
             .nav-panel.collapsed .nav-panel-clickable {
-                width: 35px;
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
             }
             .nav-section {
                 margin-bottom: 10px;
