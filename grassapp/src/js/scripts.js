@@ -678,6 +678,7 @@ function collapseNavPanel() {
             border: none;
             box-shadow: none;
             visibility: hidden;
+            overflow: hidden;
         }
         .nav-panel.collapsed * {
             pointer-events: none;
@@ -716,6 +717,7 @@ function collapseNavPanel() {
             justify-content: center;
             align-items: center;
             visibility: visible !important;
+            overflow: hidden;
         }
         .nav-panel.collapsed .nav-panel-clickable::before {
             content: '☰';
@@ -738,7 +740,9 @@ function collapseNavPanel() {
                 width: 55%;
                 padding: 10px;
                 margin: 10px 0;
-                max-height: 85vh;
+                height: auto;
+                max-height: 100vh;
+                overflow: hidden;
             }
             .nav-panel.collapsed {
                 transform: translate(calc(100% - 50px), -50%);

@@ -145,9 +145,9 @@ button:hover {
     border: 2px solid rgba(0, 255, 0, 0.5);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    overflow-y: auto;
-    max-height: 90vh;
-    transition: transform 0.3s ease;
+    height: auto;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
 .nav-panel.visible {
@@ -225,6 +225,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    overflow: hidden;
 }
 
 .nav-button {
