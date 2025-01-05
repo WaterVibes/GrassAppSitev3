@@ -671,7 +671,7 @@ function collapseNavPanel() {
             transition: visibility 0s, opacity 0.5s ease !important;
         }
         .nav-panel.collapsed {
-            transform: translate(calc(100% - 15px), -50%);
+            transform: translate(calc(100% - 8px), -50%);
             pointer-events: none;
             touch-action: none;
             background: transparent;
@@ -698,58 +698,24 @@ function collapseNavPanel() {
             position: absolute;
             left: 0;
             top: 0;
-            width: 15px;
+            width: 8px;
             height: 100%;
             pointer-events: auto;
             cursor: pointer;
             touch-action: manipulation;
             z-index: 1001;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid rgba(0, 255, 0, 0.3);
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+            background: rgba(0, 255, 0, 0.15);
+            backdrop-filter: blur(8px);
+            border-radius: 4px;
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.05);
             transition: all 0.3s ease;
         }
         .nav-panel.collapsed .nav-panel-clickable:hover {
-            background: rgba(0, 0, 0, 0.8);
-            border-color: rgba(0, 255, 0, 0.5);
-            box-shadow: 0 0 25px rgba(0, 255, 0, 0.2);
-        }
-        .nav-section {
-            margin-bottom: 15px;
-            pointer-events: auto;
-            touch-action: manipulation;
-        }
-        .nav-section:last-child {
-            margin-bottom: 0;
-        }
-        .nav-section h3 {
-            color: #00ff00;
-            text-align: center;
-            margin: 8px 0;
-            font-size: 16px;
-            font-family: 'Poppins', sans-serif;
-            text-transform: uppercase;
-            pointer-events: none;
-        }
-        .nav-button {
-            background: transparent;
-            border: 1px solid #00ff00;
-            color: #00ff00;
-            width: 100%;
-            padding: 6px 12px;
-            margin: 3px 0;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 13px;
-            transition: all 0.3s ease;
-            font-family: 'Poppins', sans-serif;
-            pointer-events: auto;
-            touch-action: manipulation;
-        }
-        .nav-button:hover {
-            background: rgba(0, 255, 0, 0.1);
+            background: rgba(0, 255, 0, 0.25);
+            border-color: rgba(0, 255, 0, 0.4);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.15);
+            width: 10px;
         }
         @media (max-width: 768px) {
             .nav-panel {
@@ -759,19 +725,17 @@ function collapseNavPanel() {
                 max-height: 85vh;
             }
             .nav-panel.collapsed {
-                transform: translate(calc(100% - 12px), -50%);
+                transform: translate(calc(100% - 6px), -50%);
             }
             .nav-panel.collapsed .nav-button,
             .nav-panel.collapsed .nav-section h3 {
                 display: none;
             }
             .nav-panel.collapsed .nav-panel-clickable {
-                width: 12px;
+                width: 6px;
             }
-            .nav-panel.expanded {
-                transform: translate(0, -50%);
-                pointer-events: auto;
-                touch-action: manipulation;
+            .nav-panel.collapsed .nav-panel-clickable:hover {
+                width: 8px;
             }
             .nav-section {
                 margin-bottom: 10px;
