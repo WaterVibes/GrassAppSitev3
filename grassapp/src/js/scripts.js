@@ -661,39 +661,40 @@ function collapseNavPanel() {
             visibility: hidden !important;
             opacity: 0 !important;
             pointer-events: none !important;
-            transition: none !important;
+            transition: visibility 0s, opacity 0.5s ease !important;
         }
         .nav-panel.visible, .top-left-logo.visible {
             display: block !important;
             visibility: visible !important;
             opacity: 1 !important;
             pointer-events: auto !important;
-            transition: none !important;
+            transition: visibility 0s, opacity 0.5s ease !important;
         }
         .nav-panel.collapsed {
             transform: translate(calc(100% - 60px), -50%);
             pointer-events: none;
             touch-action: none;
-            background: none;
+            background: transparent;
             border: none;
             box-shadow: none;
-            transition: none;
+            visibility: hidden;
         }
         .nav-panel.collapsed * {
             pointer-events: none;
             touch-action: none;
+            visibility: hidden;
         }
         .nav-panel.collapsed .nav-button {
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
             touch-action: none;
-            transition: none;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
         .nav-panel.collapsed .nav-section h3 {
             opacity: 0;
             visibility: hidden;
-            transition: none;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
         }
         .nav-panel.collapsed .nav-panel-clickable {
             position: absolute;
@@ -706,25 +707,31 @@ function collapseNavPanel() {
             cursor: pointer;
             touch-action: manipulation;
             z-index: 1001;
-            background: #000000;
+            background: rgb(0, 0, 0);
             border-radius: 50%;
-            border: 2px solid #00ff00;
-            box-shadow: none;
-            transition: none;
+            border: 2px solid rgba(0, 255, 0, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
             display: flex;
             justify-content: center;
             align-items: center;
+            visibility: visible !important;
         }
         .nav-panel.collapsed .nav-panel-clickable::before {
             content: '☰';
-            color: #00ff00;
+            color: rgba(0, 255, 0, 0.8);
             font-size: 24px;
-            transition: none;
+            transition: all 0.3s ease;
+            visibility: visible !important;
         }
         .nav-panel.collapsed .nav-panel-clickable:hover {
-            background: #000000;
-            border-color: #00ff00;
+            background: rgb(0, 0, 0);
+            border-color: rgba(0, 255, 0, 0.8);
             transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+        .nav-panel.collapsed .nav-panel-clickable:hover::before {
+            color: rgba(0, 255, 0, 1);
         }
         @media (max-width: 768px) {
             .nav-panel {
