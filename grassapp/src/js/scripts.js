@@ -191,42 +191,42 @@ controls.target.copy(initialTarget);
 const districts = [
     {
         name: 'innerHarbor',
-        markerFile: '/optimized_markers/marker_baltimore_inner_harbor_1735995279779.json'
+        markerFile: './optimized_markers/marker_baltimore_inner_harbor_1735995279779.json'
     },
     {
         name: 'canton',
-        markerFile: '/optimized_markers/marker_canton_1735995578767.json'
+        markerFile: './optimized_markers/marker_canton_1735995578767.json'
     },
     {
         name: 'fellsPoint',
-        markerFile: '/optimized_markers/marker_fells_point_1735995790884.json'
+        markerFile: './optimized_markers/marker_fells_point_1735995790884.json'
     },
     {
         name: 'federalHill',
-        markerFile: '/optimized_markers/marker_federal_hill_1735995980501.json'
+        markerFile: './optimized_markers/marker_federal_hill_1735995980501.json'
     },
     {
         name: 'mountVernon',
-        markerFile: '/optimized_markers/marker_mount_vernon_1735996124326.json'
+        markerFile: './optimized_markers/marker_mount_vernon_1735996124326.json'
     }
 ];
 
 const pages = [
     {
         name: 'aboutUs',
-        markerFile: '/optimized_markers/marker_about_us_1735994495867.json'
+        markerFile: './optimized_markers/marker_about_us_1735994495867.json'
     },
     {
         name: 'medicalPatient',
-        markerFile: '/optimized_markers/marker_medical_patient_1735994718056.json'
+        markerFile: './optimized_markers/marker_medical_patient_1735994718056.json'
     },
     {
         name: 'partnerWithUs',
-        markerFile: '/optimized_markers/marker_partner_with_us_1735994991665.json'
+        markerFile: './optimized_markers/marker_partner_with_us_1735994991665.json'
     },
     {
         name: 'deliveryDriver',
-        markerFile: '/optimized_markers/marker_delivery_driver_1735995071394.json'
+        markerFile: './optimized_markers/marker_delivery_driver_1735995071394.json'
     }
 ];
 

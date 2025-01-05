@@ -10,7 +10,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html')
       }
-    }
+    },
+    copyPublicDir: true
   },
   resolve: {
     alias: {
@@ -18,5 +19,10 @@ export default defineConfig({
       '@tweenjs/tween.js': '@tweenjs/tween.js'
     }
   },
-  publicDir: 'public'
+  publicDir: 'public',
+  server: {
+    watch: {
+      usePolling: true
+    }
+  }
 }); 
