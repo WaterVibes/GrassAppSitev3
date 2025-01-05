@@ -647,6 +647,9 @@ function collapseNavPanel() {
             transform: translate(calc(100% - 40px), -50%);
             pointer-events: none;
             touch-action: none;
+            background: transparent;
+            border: none;
+            box-shadow: none;
         }
         .nav-panel.collapsed * {
             pointer-events: none;
@@ -674,8 +677,17 @@ function collapseNavPanel() {
             cursor: pointer;
             touch-action: manipulation;
             z-index: 1001;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .nav-panel.collapsed .nav-panel-clickable:hover {
             background: rgba(0, 0, 0, 0.8);
-            border-left: 1px solid #00ff00;
+            border-color: rgba(0, 255, 0, 0.5);
+            box-shadow: 0 0 25px rgba(0, 255, 0, 0.2);
         }
         .nav-section {
             margin-bottom: 15px;
