@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrassApp - Baltimore's Community-Focused Cannabis Delivery</title>
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "/GrassAppSitev2/public/js/three.module.js",
+            "three/examples/jsm/controls/OrbitControls": "/GrassAppSitev2/public/js/OrbitControls.js",
+            "three/examples/jsm/loaders/GLTFLoader": "/GrassAppSitev2/public/js/GLTFLoader.js",
+            "three/examples/jsm/loaders/DRACOLoader": "/GrassAppSitev2/public/js/DRACOLoader.js",
+            "three/examples/jsm/renderers/CSS2DRenderer": "/GrassAppSitev2/public/js/CSS2DRenderer.js",
+            "@tweenjs/tween.js": "/GrassAppSitev2/public/js/tween.esm.js",
+            "../utils/BufferGeometryUtils.js": "/GrassAppSitev2/public/js/BufferGeometryUtils.js"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <img src="./img/Logo.png" alt="GrassApp Logo" class="logo">
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Screen -->
+    <div class="error-screen hidden">
+        <div class="error-content">
+            <h2>Error</h2>
+            <div class="error-message"></div>
+            <div class="error-details"></div>
+            <button onclick="location.reload()">Reload Page</button>
+        </div>
+    </div>
+
+    <!-- Top Logo -->
+    <div class="top-logo">
+        <img src="./img/Logo.png" alt="GrassApp Logo">
+    </div>
+
+    <!-- Navigation Panel -->
+    <div class="nav-panel">
+        <!-- Districts Section -->
+        <div class="nav-section">
+            <h3>DISTRICTS</h3>
+            <div class="button-container">
+                <button class="nav-button" onclick="selectDistrict('innerHarbor')">Baltimore Inner Harbor</button>
+                <button class="nav-button" onclick="selectDistrict('canton')">Canton</button>
+                <button class="nav-button" onclick="selectDistrict('fellsPoint')">Fells Point</button>
+                <button class="nav-button" onclick="selectDistrict('federalHill')">Federal Hill</button>
+                <button class="nav-button" onclick="selectDistrict('mountVernon')">Mount Vernon</button>
+            </div>
+        </div>
+
+        <!-- Pages Section -->
+        <div class="nav-section">
+            <h3>PAGES</h3>
+            <div class="button-container">
+                <button class="nav-button" onclick="showPage('aboutUs')">About Us</button>
+                <button class="nav-button" onclick="showPage('medicalPatient')">Medical Patient</button>
+                <button class="nav-button" onclick="showPage('partnerWithUs')">Partner With Us</button>
+                <button class="nav-button" onclick="showPage('deliveryDriver')">Delivery Driver</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./src/js/scripts.js"></script>
+</body>
+</html> 
