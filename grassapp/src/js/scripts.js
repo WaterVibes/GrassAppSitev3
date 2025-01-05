@@ -241,11 +241,17 @@ async function startAutoMove() {
     const markerData = await loadMarkerData(allMarkers[currentMarkerIndex].markerFile);
     
     if (markerData) {
-        transitionCamera(markerData, () => {
-            // Schedule next movement
-            currentMarkerIndex = (currentMarkerIndex + 1) % allMarkers.length;
-            setTimeout(startAutoMove, 8000); // Increased wait time to 8 seconds for better viewing
-        });
+        // Get the next marker data ready
+        const nextIndex = (currentMarkerIndex + 1) % allMarkers.length;
+        const nextMarkerData = await loadMarkerData(allMarkers[nextIndex].markerFile);
+        
+        if (nextMarkerData) {
+            transitionCamera(markerData, () => {
+                // Immediately start moving to the next marker
+                currentMarkerIndex = nextIndex;
+                startAutoMove();
+            }, 5000); // Reduced duration for more continuous movement
+        }
     }
 }
 
@@ -277,25 +283,22 @@ async function loadMarkerData(markerFile) {
 }
 
 // Unified camera transition function for both districts and pages
-async function transitionCamera(markerData, onComplete = null) {
-        if (!markerData || !markerData.camera || !markerData.target) {
+async function transitionCamera(markerData, onComplete = null, duration = 3000) {
+    if (!markerData || !markerData.camera || !markerData.target) {
         console.error('Invalid marker data for camera transition');
-            return;
-        }
+        return;
+    }
 
-            const targetPos = new THREE.Vector3(
-            parseFloat(markerData.target.x),
-            parseFloat(markerData.target.y),
-            parseFloat(markerData.target.z)
-            );
-            const cameraPos = new THREE.Vector3(
-            parseFloat(markerData.camera.x),
-            parseFloat(markerData.camera.y),
-            parseFloat(markerData.camera.z)
-        );
-
-    // Slower, smoother transition
-    const duration = 3000; // 3 seconds for smoother movement
+    const targetPos = new THREE.Vector3(
+        parseFloat(markerData.target.x),
+        parseFloat(markerData.target.y),
+        parseFloat(markerData.target.z)
+    );
+    const cameraPos = new THREE.Vector3(
+        parseFloat(markerData.camera.x),
+        parseFloat(markerData.camera.y),
+        parseFloat(markerData.camera.z)
+    );
     
     new TWEEN.Tween({
         cx: camera.position.x,
@@ -313,7 +316,7 @@ async function transitionCamera(markerData, onComplete = null) {
         ty: targetPos.y,
         tz: targetPos.z
     }, duration)
-    .easing(TWEEN.Easing.Quintic.InOut) // Changed to Quintic for smoother acceleration/deceleration
+    .easing(TWEEN.Easing.Sinusoidal.InOut) // Changed to Sinusoidal for smoother continuous movement
     .onUpdate((coords) => {
         camera.position.set(coords.cx, coords.cy, coords.cz);
         controls.target.set(coords.tx, coords.ty, coords.tz);
@@ -321,7 +324,7 @@ async function transitionCamera(markerData, onComplete = null) {
     .onComplete(() => {
         if (onComplete) onComplete();
     })
-                .start();
+    .start();
 }
 
 // Modify the selectDistrictImpl and showPageImpl functions to disable auto-move
