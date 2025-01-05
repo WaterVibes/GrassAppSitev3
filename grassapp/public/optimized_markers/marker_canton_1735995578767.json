@@ -1,24 +1,12 @@
 {
-    "camera": {
-        "x": "300",
-        "y": "200",
-        "z": "300"
-    },
-    "target": {
-        "x": "300",
-        "y": "0",
-        "z": "300"
-    },
-    "title": "Canton",
-    "description": "Welcome to Canton, one of Baltimore's most charming waterfront neighborhoods!",
-    "cards": [
-        {
-            "title": "Canton Square",
-            "content": "Explore the historic Canton Square, surrounded by unique shops, restaurants, and local businesses."
-        },
-        {
-            "title": "Delivery Zone",
-            "content": "Fast and reliable cannabis delivery service available throughout the Canton area."
-        }
-    ]
-} 
+  "camera": {
+    "x": "-3096.17",
+    "y": "406.89",
+    "z": "-1112.70"
+  },
+  "target": {
+    "x": "-2521.67",
+    "y": "-58.11",
+    "z": "-359.57"
+  }
+}

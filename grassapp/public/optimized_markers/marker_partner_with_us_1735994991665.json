@@ -1,24 +1,12 @@
 {
-    "camera": {
-        "x": "-300",
-        "y": "400",
-        "z": "-300"
-    },
-    "target": {
-        "x": "-300",
-        "y": "0",
-        "z": "-300"
-    },
-    "title": "Partner With Us",
-    "description": "Join GrassApp as a business partner in Baltimore's cannabis community.",
-    "cards": [
-        {
-            "title": "Business Opportunities",
-            "content": "Learn about partnership opportunities with GrassApp and how we can grow together in Baltimore's cannabis market."
-        },
-        {
-            "title": "Partner Benefits",
-            "content": "Discover the advantages of partnering with GrassApp, including our technology platform and delivery network."
-        }
-    ]
-} 
+  "camera": {
+    "x": "1488.51",
+    "y": "109.17",
+    "z": "-1092.01"
+  },
+  "target": {
+    "x": "1690.12",
+    "y": "-55.83",
+    "z": "-632.25"
+  }
+}

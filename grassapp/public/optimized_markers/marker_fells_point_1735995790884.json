@@ -1,24 +1,12 @@
 {
-    "camera": {
-        "x": "200",
-        "y": "200",
-        "z": "300"
-    },
-    "target": {
-        "x": "200",
-        "y": "0",
-        "z": "300"
-    },
-    "title": "Fells Point",
-    "description": "Discover historic Fells Point, known for its maritime history and vibrant community.",
-    "cards": [
-        {
-            "title": "Historic District",
-            "content": "Explore cobblestone streets and historic buildings in one of Baltimore's oldest waterfront communities."
-        },
-        {
-            "title": "Local Delivery",
-            "content": "Convenient cannabis delivery service available throughout the Fells Point neighborhood."
-        }
-    ]
-} 
+  "camera": {
+    "x": "-405.62",
+    "y": "291.89",
+    "z": "-837.74"
+  },
+  "target": {
+    "x": "-1020.30",
+    "y": "-73.11",
+    "z": "-130.64"
+  }
+}
