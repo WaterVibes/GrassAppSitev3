@@ -35,8 +35,32 @@ style.textContent = `
         pointer-events: auto !important;
         transition: opacity 0.5s ease !important;
     }
+    .top-left-logo {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .top-left-logo:hover {
+        transform: scale(1.05);
+    }
+    .top-left-logo img {
+        width: 150px;
+        height: auto;
+        filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.2));
+    }
 `;
 document.head.appendChild(style);
+
+// Create and add the top-left logo
+const topLeftLogo = document.createElement('a');
+topLeftLogo.href = 'https://www.instagram.com/thegrassapp';
+topLeftLogo.target = '_blank';
+topLeftLogo.className = 'top-left-logo';
+topLeftLogo.innerHTML = '<img src="./img/Logo.png" alt="GrassApp Logo">';
+document.body.appendChild(topLeftLogo);
 
 // Initialize scene and camera
 scene = new THREE.Scene();
@@ -386,7 +410,7 @@ const pageContent = {
                 highlight: "Founded in Baltimore, our mission is rooted in uplifting communities, providing responsible access to cannabis, and celebrating the unique spirit of the people we serve.",
                 cta: {
                     text: "Join the GrassApp Community",
-                    link: "#"
+                    link: "https://www.instagram.com/thegrassapp"
                 }
             }
         ]
