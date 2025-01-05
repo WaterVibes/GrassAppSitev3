@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GrassApp - Baltimore's Community-Focused Cannabis Delivery</title>
-    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="/src/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <script type="importmap">
     {
         "imports": {
-            "three": "./src/js/three.module.js",
-            "three/examples/jsm/controls/OrbitControls": "./src/js/OrbitControls.js",
-            "three/examples/jsm/loaders/GLTFLoader": "./src/js/GLTFLoader.js",
-            "three/examples/jsm/loaders/DRACOLoader": "./src/js/DRACOLoader.js",
-            "three/examples/jsm/renderers/CSS2DRenderer": "./src/js/CSS2DRenderer.js",
-            "@tweenjs/tween.js": "./src/js/tween.esm.js",
-            "../utils/BufferGeometryUtils.js": "./src/js/BufferGeometryUtils.js"
+            "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+            "three/examples/jsm/controls/OrbitControls": "https://unpkg.com/three@0.158.0/examples/jsm/controls/OrbitControls.js",
+            "three/examples/jsm/loaders/GLTFLoader": "https://unpkg.com/three@0.158.0/examples/jsm/loaders/GLTFLoader.js",
+            "three/examples/jsm/loaders/DRACOLoader": "https://unpkg.com/three@0.158.0/examples/jsm/loaders/DRACOLoader.js",
+            "three/examples/jsm/renderers/CSS2DRenderer": "https://unpkg.com/three@0.158.0/examples/jsm/renderers/CSS2DRenderer.js",
+            "@tweenjs/tween.js": "https://unpkg.com/@tweenjs/tween.js@21.0.0/dist/tween.esm.js"
         }
     }
     </script>
@@ -24,7 +23,7 @@
     <!-- Loading Screen -->
     <div class="loading-screen">
         <div class="loading-content">
-            <img src="public/img/Logo.png" alt="GrassApp Logo" class="logo">
+            <img src="/public/img/Logo.png" alt="GrassApp Logo" class="logo">
             <div class="loading-bar">
                 <div class="loading-progress"></div>
             </div>
@@ -43,7 +42,7 @@
 
     <!-- Top Logo -->
     <div class="top-logo">
-        <img src="public/img/Logo.png" alt="GrassApp Logo">
+        <img src="/public/img/Logo.png" alt="GrassApp Logo">
     </div>
 
     <!-- Navigation Panel -->
@@ -72,6 +71,6 @@
         </div>
     </div>
 
-    <script type="module" src="src/js/scripts.js"></script>
+    <script type="module" src="/src/js/scripts.js"></script>
 </body>
 </html> 
