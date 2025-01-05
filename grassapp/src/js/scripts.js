@@ -896,7 +896,7 @@ try {
     gltfLoader.setDRACOLoader(dracoLoader);
 
     // Load the model
-    const modelPath = './models/baltimore_city_optimized_v2.glb';
+    const modelPath = 'models/baltimore_city_optimized_v2.glb';
     console.log('Starting to load model from:', modelPath);
     gltfLoader.load(
         modelPath,
@@ -925,11 +925,35 @@ try {
                     const topLogo = document.querySelector('.top-left-logo');
                     
                     if (navPanel) {
-                        navPanel.classList.add('visible');
+                        // Add animation styles for nav panel
+                        const animStyle = document.createElement('style');
+                        animStyle.textContent = `
+                            @keyframes slideInFromRight {
+                                0% {
+                                    transform: translate(100%, -50%);
+                                    opacity: 0;
+                                }
+                                100% {
+                                    transform: translate(0, -50%);
+                                    opacity: 1;
+                                }
+                            }
+                            .nav-panel.visible {
+                                animation: slideInFromRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                            }
+                        `;
+                        document.head.appendChild(animStyle);
+                        
+                        // Add a slight delay for the nav panel to create a sequence
+                        setTimeout(() => {
+                            navPanel.classList.add('visible');
+                        }, 300);
                     }
                     
                     if (topLogo) {
-                        topLogo.classList.add('visible');
+                        requestAnimationFrame(() => {
+                            topLogo.classList.add('visible');
+                        });
                     }
                     // Start automatic camera movement
                     startAutoMove();
@@ -944,7 +968,12 @@ try {
             }
         },
         (error) => {
-            console.error('Error loading model:', error);
+            console.error('Detailed error loading model:', {
+                message: error.message,
+                stack: error.stack,
+                type: error.type,
+                url: error.target?.responseURL || 'No URL available'
+            });
             showError('Failed to load 3D model', error.message);
         }
     );
