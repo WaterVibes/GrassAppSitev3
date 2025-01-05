@@ -705,10 +705,10 @@ function collapseNavPanel() {
             cursor: pointer;
             touch-action: manipulation;
             z-index: 1001;
-            background: rgb(0, 0, 0);
+            background: #000000;
             border-radius: 50%;
-            border: 2px solid rgba(0, 255, 0, 0.5);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 2px solid #00ff00;
+            box-shadow: none;
             transition: all 0.3s ease;
             display: flex;
             justify-content: center;
@@ -716,18 +716,14 @@ function collapseNavPanel() {
         }
         .nav-panel.collapsed .nav-panel-clickable::before {
             content: '☰';
-            color: rgba(0, 255, 0, 0.8);
+            color: #00ff00;
             font-size: 24px;
             transition: all 0.3s ease;
         }
         .nav-panel.collapsed .nav-panel-clickable:hover {
-            background: rgb(0, 0, 0);
-            border-color: rgba(0, 255, 0, 0.8);
+            background: #000000;
+            border-color: #00ff00;
             transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-        }
-        .nav-panel.collapsed .nav-panel-clickable:hover::before {
-            color: rgba(0, 255, 0, 1);
         }
         @media (max-width: 768px) {
             .nav-panel {
