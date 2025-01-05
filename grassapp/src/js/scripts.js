@@ -671,7 +671,7 @@ function collapseNavPanel() {
             transition: visibility 0s, opacity 0.5s ease !important;
         }
         .nav-panel.collapsed {
-            transform: translate(calc(100% - 40px), -50%);
+            transform: translate(calc(100% - 25px), -50%);
             pointer-events: none;
             touch-action: none;
             background: transparent;
@@ -698,23 +698,19 @@ function collapseNavPanel() {
             position: absolute;
             left: 0;
             top: 0;
-            width: 40px;
+            width: 25px;
             height: 100%;
             pointer-events: auto;
             cursor: pointer;
             touch-action: manipulation;
             z-index: 1001;
-            background: rgba(0, 255, 0, 0.15);
-            backdrop-filter: blur(8px);
-            border-radius: 4px;
-            border: 1px solid rgba(0, 255, 0, 0.2);
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.05);
+            background: rgba(0, 0, 0, 0.95);
+            border-left: 2px solid rgba(0, 255, 0, 0.5);
             transition: all 0.3s ease;
         }
         .nav-panel.collapsed .nav-panel-clickable:hover {
-            background: rgba(0, 255, 0, 0.25);
-            border-color: rgba(0, 255, 0, 0.4);
-            box-shadow: 0 0 20px rgba(0, 255, 0, 0.15);
+            background: rgba(0, 0, 0, 1);
+            border-left: 2px solid rgba(0, 255, 0, 0.8);
         }
         @media (max-width: 768px) {
             .nav-panel {
@@ -724,14 +720,14 @@ function collapseNavPanel() {
                 max-height: 85vh;
             }
             .nav-panel.collapsed {
-                transform: translate(calc(100% - 30px), -50%);
+                transform: translate(calc(100% - 35px), -50%);
             }
             .nav-panel.collapsed .nav-button,
             .nav-panel.collapsed .nav-section h3 {
                 display: none;
             }
             .nav-panel.collapsed .nav-panel-clickable {
-                width: 30px;
+                width: 35px;
             }
             .nav-section {
                 margin-bottom: 10px;
