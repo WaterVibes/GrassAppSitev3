@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-  base: '/GrassAppSitev2/',
+  base: '/GrassAppSitev3/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
