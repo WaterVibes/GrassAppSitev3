@@ -368,7 +368,7 @@ const pageContent = {
             {
                 title: "Who We Are",
                 content: "GrassApp is revolutionizing cannabis delivery in Baltimore, creating a seamless bridge between trusted dispensaries and the community. We're not just delivering products—we're delivering peace of mind.",
-                icon: '<img src="./public/img/Logo.png" class="card-logo" alt="GrassApp Logo" style="width: 300px; height: auto; margin: 20px auto;" />',
+                icon: '<img src="./img/Logo.png" class="card-logo" alt="GrassApp Logo" style="width: 300px; height: auto; margin: 20px auto;" />',
                 features: [
                     { icon: '🌟', text: 'Safe & Seamless Delivery' },
                     { icon: '🤝', text: 'Community-Focused' },
