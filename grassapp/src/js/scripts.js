@@ -748,18 +748,6 @@ function collapseNavPanel() {
                 height: 50px;
                 font-size: 20px;
             }
-            .nav-section {
-                margin-bottom: 10px;
-            }
-            .nav-section h3 {
-                font-size: 14px;
-                margin: 5px 0;
-            }
-            .nav-button {
-                padding: 7px;
-                margin: 2px 0;
-                font-size: 12px;
-            }
         }
     `;
     document.head.appendChild(style);
