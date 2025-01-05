@@ -17,5 +17,6 @@ export default defineConfig({
       'three': 'three',
       '@tweenjs/tween.js': '@tweenjs/tween.js'
     }
-  }
+  },
+  publicDir: 'public'
 }); 
