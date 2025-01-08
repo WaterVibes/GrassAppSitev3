@@ -862,8 +862,7 @@ svg g[data-district-id].active circle:last-child {
     .top-logo {
         position: fixed;
         top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 20px;
         z-index: 99;
     }
 
@@ -873,22 +872,6 @@ svg g[data-district-id].active circle:last-child {
     }
 
     .nav-panel {
-        position: fixed;
-        top: 80px; /* Space for logo */
-        left: 10px;
-        right: 10px;
-        width: auto;
-        max-height: calc(100vh - 100px); /* Adjust for logo space */
-        overflow-y: auto;
-        transform: none;
-    }
-
-    .nav-section {
-        margin-bottom: 15px;
-    }
-
-    .nav-button {
-        padding: 10px;
-        font-size: 14px;
+        top: 80px;
     }
 } 
