@@ -126,21 +126,106 @@ button:hover {
 /* Navigation Panel */
 .nav-panel {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    background: rgba(0, 0, 0, 0.8);
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
     color: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
     z-index: 100;
     width: 250px;
-    max-height: 80vh;
+    max-height: 70vh;
     overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.nav-panel h2 {
-    margin: 0 0 15px 0;
-    font-size: 1.2em;
+.nav-section {
+    margin-bottom: 20px;
+}
+
+.nav-section:last-child {
+    margin-bottom: 0;
+}
+
+.nav-section h3 {
+    color: white;
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-button {
+    width: 100%;
+    padding: 10px 15px;
+    background: rgba(76, 175, 80, 0.2);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+    background: rgba(76, 175, 80, 0.3);
+    border-color: rgba(76, 175, 80, 0.4);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .nav-panel {
+        bottom: 10px;
+        right: 10px;
+        padding: 15px;
+        width: 200px;
+        max-height: 60vh;
+        background: rgba(0, 0, 0, 0.95);
+    }
+
+    .nav-section {
+        margin-bottom: 15px;
+    }
+
+    .nav-section h3 {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .button-container {
+        gap: 6px;
+    }
+
+    .nav-button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+/* Custom scrollbar for navigation panel */
+.nav-panel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.nav-panel::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.nav-panel::-webkit-scrollbar-thumb {
+    background: rgba(76, 175, 80, 0.3);
+    border-radius: 3px;
+}
+
+.nav-panel::-webkit-scrollbar-thumb:hover {
+    background: rgba(76, 175, 80, 0.4);
 }
 
 .district-list {
