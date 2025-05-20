@@ -165,6 +165,12 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.95);
     box-shadow: 0 0 25px rgba(0, 255, 0, 0.15);
     border: 1px solid rgba(0, 255, 0, 0.4);
+    overflow: hidden !important;
+    scrollbar-width: none !important; /* Firefox */
+}
+
+.nav-panel.collapsed::-webkit-scrollbar {
+    display: none !important; /* Chrome, Safari */
 }
 
 .nav-panel.collapsed .nav-section {
@@ -378,6 +384,7 @@ button:hover {
     width: 90%;
     max-height: 80vh;
     overflow-y: auto;
+    overflow-x: hidden;
     color: #fff;
     box-shadow: 0 0 20px rgba(0, 255, 127, 0.3);
     z-index: 1000;
@@ -963,4 +970,48 @@ button:hover {
     font-size: 1em;
     margin-bottom: 1em;
     font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .medical-list,
+    .driver-list,
+    .partner-list {
+        grid-template-columns: 1fr !important;
+    }
+    .info-card {
+        padding: 1.2rem 1rem;
+        max-height: 90vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .info-card-content {
+        gap: 1rem;
+    }
+    .info-card h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+    }
+    .info-card h3 {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .info-card p,
+    .info-card li {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    .nav-panel {
+        margin-top: 80px !important;
+    }
+    .nav-button {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-panel {
+        overflow-y: visible !important;
+    }
 } 
