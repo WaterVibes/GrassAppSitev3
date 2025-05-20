@@ -50,16 +50,89 @@ window.addEventListener('resize', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-// District selection function
-window.selectDistrict = function(district) {
-    console.log('Selected district:', district);
-    // Add district-specific logic here
+// Info sections data
+const infoSections = {
+    about: {
+        title: 'About GrassApp',
+        content: 'GrassApp is a marketplace platform connecting medical patients, headshops, and delivery drivers. We provide a seamless, secure, and fast way to get non-tobacco products like bongs, rolling papers, lighters, snacks, and beverages delivered to your door. GrassApp is not a direct seller; we simply facilitate the connection between buyers and sellers.'
+    },
+    medical: {
+        title: 'Medical Patients',
+        content: 'GrassApp makes it easy for medical patients to connect with licensed dispensaries for quick and secure delivery. All transactions are handled securely, and we prioritize patient privacy and convenience.'
+    },
+    partner: {
+        title: 'Partner with Us',
+        content: 'Are you a headshop or small business looking to expand your reach? Partner with GrassApp to offer your products for local delivery. From glassware to snacks, we help you connect with your community and increase your sales without the hassle of managing your own delivery network.'
+    },
+    driver: {
+        title: 'Become a Delivery Driver',
+        content: 'Join our network of independent drivers and earn on your own schedule. Whether you\'re delivering bongs, rolling papers, or just a bag of chips, GrassApp makes it easy to pick up and deliver orders in your area.'
+    },
+    headshops: {
+        title: 'Headshops',
+        content: 'GrassApp connects local headshops with customers who want the convenience of delivery. We legally deliver non-tobacco products like bongs, glass pipes, rolling papers, lighters, grinders, snacks, and beverages. Headshops can reach a broader audience without worrying about compliance issues or delivery logistics.'
+    }
 };
+
+// Create navigation panel
+function createNavigationPanel() {
+    const navPanel = document.createElement('div');
+    navPanel.className = 'nav-panel';
+
+    Object.keys(infoSections).forEach(section => {
+        const sectionDiv = document.createElement('div');
+        sectionDiv.className = 'nav-section';
+
+        const title = document.createElement('h3');
+        title.textContent = infoSections[section].title;
+
+        const button = document.createElement('button');
+        button.className = 'nav-button';
+        button.textContent = 'Learn More';
+        button.onclick = () => showInfoCards(section);
+
+        sectionDiv.appendChild(title);
+        sectionDiv.appendChild(button);
+        navPanel.appendChild(sectionDiv);
+    });
+
+    document.body.appendChild(navPanel);
+}
 
 // Info cards function
 window.showInfoCards = function(type) {
-    console.log('Showing info cards for:', type);
-    // Add info cards logic here
+    const section = infoSections[type];
+    if (!section) return;
+
+    // Create or update info card
+    let infoCard = document.querySelector('.info-card');
+    if (!infoCard) {
+        infoCard = document.createElement('div');
+        infoCard.className = 'info-card';
+        document.body.appendChild(infoCard);
+    }
+
+    // Update content with animation
+    infoCard.innerHTML = `
+        <h2>${section.title}</h2>
+        <p>${section.content}</p>
+        <button class="close-button">×</button>
+    `;
+
+    // Add close button functionality
+    const closeButton = infoCard.querySelector('.close-button');
+    closeButton.onclick = () => {
+        infoCard.style.opacity = '0';
+        setTimeout(() => {
+            infoCard.style.display = 'none';
+        }, 300);
+    };
+
+    // Show card with animation
+    infoCard.style.display = 'block';
+    setTimeout(() => {
+        infoCard.style.opacity = '1';
+    }, 10);
 };
 
 // Update loading progress
@@ -71,6 +144,7 @@ function updateLoadingProgress(progress) {
                 loadingScreen.style.opacity = '0';
                 setTimeout(() => {
                     loadingScreen.style.display = 'none';
+                    createNavigationPanel(); // Create navigation panel after loading
                 }, 500);
             }, 500);
         }

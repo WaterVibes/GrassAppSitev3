@@ -1,0 +1,63 @@
+Design & Visual Aesthetics
+
+1. Color Scheme
+
+Primary Colors: Black (#000000) and Dark Green (#1B5E20) to reflect a sleek, modern, and natural aesthetic.
+
+Accent Colors: Neon Green (#00FF00) for interactive elements (buttons, highlights) to create contrast.
+
+Typography Colors: White (#FFFFFF) for text to ensure readability against the dark background.
+
+2. Design Elements
+
+Minimalist, high-contrast UI with bold text and clean button designs.
+
+Rounded corners on UI components for a modern, app-friendly look.
+
+Product images showcased in high resolution with soft shadows for emphasis.
+
+Interactive animations (hover effects, smooth transitions) for a premium feel.
+
+3. Visual Aesthetics
+
+Dark-themed interface with neon green highlights for an edgy, high-tech feel.
+
+Vibrant images for product display to make items visually appealing.
+
+Micro-interactions (e.g., subtle button pulses, hover effects) to enhance user engagement.
+
+4. UI/UX Patterns
+
+Card-based layout for dispensary and product listings.
+
+Sticky navigation bar for easy access to cart and profile.
+
+One-tap checkout process for quick, seamless purchases.
+
+Live order tracking interface with a map and real-time updates.
+
+Dark mode default with a possible light mode toggle in future iterations.
+
+Next Steps for Cursor
+
+Set up a Web App Framework
+
+Use Next.js (React) or Vue.js for the frontend.
+
+Ensure it is mobile-friendly from the start.
+
+Build the Proxy Server
+
+Use FastAPI (Python) or Node.js (Express) to fetch dispensary menus.
+
+Implement caching with Redis.
+
+Develop the Cart & Checkout System
+
+Allow users to add items to their cart without redirecting to dispensary platforms.
+
+Implement GrassApp-controlled payments.
+
+Launch Web App Before Expanding to Mobile Apps
+
+The web app should be fully functional before moving to native mobile development.
