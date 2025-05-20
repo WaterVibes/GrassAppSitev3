@@ -627,19 +627,65 @@ button:hover {
         z-index: 1001;
     }
     .top-left-logo img {
-        width: 120px;
-        padding: 4px;
+        width: 90px;
+        padding: 6px;
     }
     .nav-panel {
-        margin-top: 100px;
+        position: fixed;
+        top: 60px; /* below the logo */
+        left: 4vw;
+        right: 4vw;
+        width: 92vw;
+        max-width: 98vw;
+        margin: 0 auto;
+        border-radius: 16px;
+        box-sizing: border-box;
+        max-height: calc(100vh - 70px); /* always fits below logo */
+        overflow-y: auto;
+        overflow-x: hidden;
     }
-    .nav-panel .nav-button {
-        padding: 10px 12px;
+    .nav-section {
+        margin-bottom: 10px;
+    }
+    .info-card {
+        padding: 1.2rem 1rem;
+        max-height: 90vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .info-card-content {
+        gap: 1rem;
+    }
+    .info-card h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0.75rem;
+    }
+    .info-card h3 {
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .info-card p,
+    .info-card li {
         font-size: 0.95rem;
+        line-height: 1.4;
     }
-    .nav-section h3 {
-        margin-bottom: 0.25em;
-        font-size: 1rem;
+    .nav-button {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-button {
+        padding: 7px 8px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-panel {
+        overflow-y: visible !important;
     }
 }
 
