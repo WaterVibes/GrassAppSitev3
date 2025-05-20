@@ -1,0 +1,9 @@
+[33mcommit 17935c1a309c44e86f430a82b3cb9f9c682f1c10[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: WaterVibes <your.email@example.com>
+Date:   Fri Mar 21 19:35:01 2025 -0400
+
+    Fix asset paths by setting Vite base to empty string
+
+ grassapp/vite.config.js | 2 [32m+[m[31m-[m
+ vite.config.js          | 2 [32m+[m[31m-[m
+ 2 files changed, 2 insertions(+), 2 deletions(-)

@@ -391,134 +391,126 @@ async function showPageImpl(pageName) {
 // Add page content data with multiple cards per page
 const pageContent = {
     aboutUs: {
-        cards: [
-            {
-                title: "Who We Are",
-                content: "GrassApp is revolutionizing cannabis delivery in Baltimore, creating a seamless bridge between trusted dispensaries and the community. We're not just delivering products—we're delivering peace of mind.",
-                icon: '<img src="./img/Logo.png" class="card-logo" alt="GrassApp Logo" style="width: 300px; height: auto; margin: 20px auto;" />',
-                features: [
-                    { icon: '🌟', text: 'Safe & Seamless Delivery' },
-                    { icon: '🤝', text: 'Community-Focused' },
-                    { icon: '🔒', text: 'Secure & Discreet' },
-                    { icon: '📱', text: 'User-Friendly Platform' }
-                ],
-                stats: [
-                    { number: '24/7', label: 'Customer Support' },
-                    { number: '30min', label: 'Average Delivery Time' },
-                    { number: '100%', label: 'Licensed Partners' }
-                ],
-                highlight: "Founded in Baltimore, our mission is rooted in uplifting communities, providing responsible access to cannabis, and celebrating the unique spirit of the people we serve.",
-                cta: {
-                    text: "Join the GrassApp Community",
-                    link: "https://www.instagram.com/thegrassapp"
-                }
-            }
-        ]
+        title: 'About GrassApp',
+        content: `
+            <div class="info-card-content">
+                <p>GrassApp is a cutting-edge marketplace platform that connects consumers with local smoke shops and dispensaries. We bridge the gap between small businesses and their communities, providing a seamless, cashless delivery experience for legally sellable products like glassware, rolling supplies, accessories, and more.</p>
+                <div class="about-us-highlights">
+                    <h3>Why Choose GrassApp?</h3>
+                    <ul>
+                        <li><strong>Seamless Integration:</strong> Sync inventory in real-time, manage orders, and track sales effortlessly.</li>
+                        <li><strong>Local Focus:</strong> We prioritize small businesses, helping you reach customers in your community.</li>
+                        <li><strong>Secure Payments:</strong> Fast, transparent payouts without the headaches of third-party platforms.</li>
+                    </ul>
+                    <h4 style="margin-top: 20px;">🚫 Legal Notice:</h4>
+                    <p>GrassApp does not sell or deliver cannabis, tobacco, or other controlled substances. We only facilitate the sale of legally permissible products like glassware, rolling supplies, and non-tobacco accessories.</p>
+                </div>
+                <div style="text-align:center; margin-top: 1.5em; display: flex; flex-direction: column; gap: 0.5em; align-items: center;">
+                    <a href="https://www.instagram.com/thegrassapp" target="_blank" class="cta-button">Learn More</a>
+                    <p style="color:#ffb300; font-size:0.95em; margin-bottom:0.5em;">Note: PDFs will be downloaded to your device.</p>
+                    <a href="/General%20T&A.pdf" target="_blank" class="cta-button" download="General T&amp;A.pdf">Download General T&amp;A (PDF)</a>
+                </div>
+            </div>
+        `
     },
     medicalPatient: {
-        cards: [
-            {
-                title: "How to Get Your Medical Cannabis Card",
-                content: "Before GrassApp's delivery services launch, here's how to get your medical cannabis card in Maryland:",
-                icon: '💊',
-                features: [
-                    { icon: '📝', text: 'Register at Maryland OneStop Portal' },
-                    { icon: '👨‍⚕️', text: 'Get Certified by a Provider' },
-                    { icon: '💳', text: 'Receive Your MMCC ID Card' },
-                    { icon: '✅', text: 'Visit Any Licensed Dispensary' }
-                ],
-                cta: {
-                    text: "Register at Maryland OneStop",
-                link: "https://onestop.md.gov/public_profiles/adult-patient-registration-601c0fd9f9d7557af267e1e1"
-                }
-            },
-            {
-                title: "Coming Soon: GrassApp Delivery",
-                content: "While we prepare to launch our delivery services, we're here to guide you through the process of becoming a medical cannabis patient. Stay tuned for updates on our launch!",
-                icon: '🚀',
-                features: [
-                    { icon: '📱', text: 'Easy-to-use Mobile App' },
-                    { icon: '🏃', text: 'Fast Delivery Service' },
-                    { icon: '🔒', text: 'Secure Transactions' },
-                    { icon: '💯', text: 'Licensed Dispensary Partners' }
-                ]
-            }
-        ]
+        title: 'Medical Patients',
+        content: `
+            <div class="info-card-content">
+                <p>GrassApp makes it easy for medical patients to connect with licensed dispensaries for quick and secure delivery. All transactions are handled securely, and we prioritize patient privacy and convenience.</p>
+                <div class="medical-list">
+                    <div class="medical-benefits-card">
+                        <h3>Benefits</h3>
+                        <ul>
+                            <li>Secure and private delivery</li>
+                            <li>Verified dispensaries</li>
+                            <li>Easy ordering process</li>
+                            <li>24/7 customer support</li>
+                        </ul>
+                    </div>
+                    <div class="medical-steps-card">
+                        <h3>How It Works</h3>
+                        <ol>
+                            <li>Create your account</li>
+                            <li>Upload your medical card</li>
+                            <li>Browse local dispensaries</li>
+                            <li>Place your order</li>
+                        </ol>
+                    </div>
+                </div>
+                <div style="text-align:center; margin-top: 1.5em; display: flex; flex-direction: column; gap: 0.5em; align-items: center;">
+                    <a href="https://onestop.md.gov/public_profiles/adult-patient-registration-601c0fd9f9d7557af267e1e1" target="_blank" class="cta-button">Register as Patient</a>
+                    <p style="color:#ffb300; font-size:0.95em; margin-bottom:0.5em;">Note: PDFs will be downloaded to your device.</p>
+                </div>
+            </div>
+        `
     },
     partnerWithUs: {
-        cards: [
-            {
-                title: "Transform Your Business with GrassApp",
-                content: "Join Baltimore's premier cannabis delivery network and revolutionize your business reach. Our cutting-edge platform connects you with a growing community of verified medical cannabis patients, offering unparalleled market expansion opportunities.",
-                icon: '🌟',
-                features: [
-                    { icon: '📈', text: 'Expand Your Customer Base' },
-                    { icon: '🔄', text: 'Real-Time Inventory Sync' },
-                    { icon: '🛡️', text: 'Enterprise-Grade Security' },
-                    { icon: '📱', text: 'Seamless Integration' }
-                ],
-                stats: [
-                    { number: '24/7', label: 'Technical Support' },
-                    { number: '100%', label: 'Digital Coverage' },
-                    { number: '0%', label: 'Integration Cost' }
-                ],
-                highlight: "Be part of Baltimore's fastest-growing cannabis delivery network. Our platform is designed to enhance your business while maintaining the highest standards of compliance and security.",
-                cta: {
-                    text: "Contact Us",
-                    link: "mailto:contact@thegrassapp.com"
-                }
-            },
-            {
-                title: "Exclusive Partnership Benefits",
-                content: "Experience the power of GrassApp's state-of-the-art delivery infrastructure. Our platform seamlessly integrates with your existing systems, providing comprehensive business solutions and real-time analytics.",
-                icon: '💎',
-                features: [
-                    { icon: '📊', text: 'Business Analytics' },
-                    { icon: '🚀', text: 'Priority Delivery' },
-                    { icon: '💰', text: 'Revenue Growth' },
-                    { icon: '🤝', text: 'Dedicated Support' }
-                ],
-                stats: [
-                    { number: '30min', label: 'Average Delivery' },
-                    { number: '99.9%', label: 'Platform Uptime' },
-                    { number: '100%', label: 'Secure Payments' }
-                ],
-                cta: {
-                    text: "Contact Us",
-                    link: "mailto:contact@thegrassapp.com"
-                }
-            }
-        ]
+        title: 'Become an Affiliate',
+        content: `
+            <div class="info-card-content">
+                <p>Join the growing network of headshops and dispensaries that trust GrassApp to power their local deliveries. We provide a secure, scalable, and modern platform that eliminates the hassle of managing logistics and payments, allowing you to focus on what you do best – running your business.</p>
+                <div class="partner-benefits">
+                    <h3>🌱 Benefits of Partnering with GrassApp:</h3>
+                    <ul>
+                        <li><b>Broader Reach:</b> Tap into a growing community of local buyers who value convenience.</li>
+                        <li><b>Instant Online Presence:</b> Showcase your products with high-quality images, real-time inventory updates, and automated order management.</li>
+                        <li><b>Secure, Cashless Transactions:</b> All payments are processed securely through trusted financial partners.</li>
+                        <li><b>Flexible Marketing:</b> Access exclusive promo opportunities and targeted local ads.</li>
+                        <li><b>Real-Time Analytics:</b> Track your sales, customer trends, and performance metrics through our intuitive dashboard.</li>
+                    </ul>
+                </div>
+                <div class="partner-steps">
+                    <h3>📦 How It Works:</h3>
+                    <ol>
+                        <li><b>Sign Up:</b> Create your shop profile and list your products.</li>
+                        <li><b>Start Selling:</b> Receive orders from local customers instantly.</li>
+                        <li><b>We Handle the Rest:</b> Focus on your business while we handle payments, logistics, and customer support.</li>
+                    </ol>
+                    <h4 style="margin-top: 20px;">🚫 Legal Notice:</h4>
+                    <p>GrassApp does not sell or deliver cannabis, tobacco, or other controlled substances. We only facilitate the sale of legally permissible products like glassware, rolling supplies, and non-tobacco accessories.</p>
+                </div>
+                <div class="partner-cta" style="text-align:center; display: flex; flex-direction: column; gap: 0.5em; align-items: center;">
+                    <a href="mailto:partners@thegrassapp.com" class="cta-button">Join the Network</a>
+                    <p style="color:#ffb300; font-size:0.95em; margin-bottom:0.5em;">Note: PDFs will be downloaded to your device.</p>
+                    <a href="/TermsAndAgreement.PDF.pdf" target="_blank" class="cta-button" download="TermsAndAgreement.PDF.pdf">Download Terms and Agreement (PDF)</a>
+                    <a href="/Privacy%20Policy%20.pdf" target="_blank" class="cta-button" download="Privacy Policy .pdf">Download Privacy Policy (PDF)</a>
+                </div>
+            </div>
+        `
     },
     deliveryDriver: {
-        cards: [
-            {
-                title: "Become a Medical Cannabis Caregiver",
-                content: "To prepare for GrassApp's launch, you'll need to register as a medical cannabis caregiver in Maryland. Here's what you need to know:",
-                icon: '📋',
-                features: [
-                    { icon: '✅', text: 'Register at Maryland OneStop Portal' },
-                    { icon: '📄', text: 'Complete Background Check' },
-                    { icon: '💳', text: 'Obtain MMCC Caregiver ID' },
-                    { icon: '🚗', text: 'Valid Driver\'s License Required' }
-                ],
-                cta: {
-                    text: "Start Caregiver Registration",
-                link: "https://onestop.md.gov/public_profiles/caregiver-registration-601c0fd5f9d7557af267cee1"
-                }
-            },
-            {
-                title: "Join GrassApp as a Driver",
-                content: "Once you're registered as a caregiver, you'll be ready to join GrassApp when we launch. Benefits include:",
-                icon: '🚗',
-                features: [
-                    { icon: '💰', text: 'Competitive Pay' },
-                    { icon: '⏰', text: 'Flexible Hours' },
-                    { icon: '📱', text: 'User-Friendly App' },
-                    { icon: '🛡️', text: 'Insurance Coverage' }
-                ]
-            }
-        ]
+        title: 'Become a Delivery Driver',
+        content: `
+            <div class="info-card-content">
+                <p>Join our network of independent drivers and earn on your own schedule. Whether you're delivering bongs, rolling papers, or just a bag of chips, GrassApp makes it easy to pick up and deliver orders in your area.</p>
+                <div class="driver-list">
+                    <div class="driver-opportunity-card">
+                        <h3>Why Drive With Us?</h3>
+                        <ul>
+                            <li>Flexible hours</li>
+                            <li>Competitive pay</li>
+                            <li>Weekly payments</li>
+                            <li>Support team</li>
+                        </ul>
+                    </div>
+                    <div class="driver-requirements-card">
+                        <h3>Requirements</h3>
+                        <ul>
+                            <li>Valid driver's license</li>
+                            <li>Reliable vehicle</li>
+                            <li>Smartphone</li>
+                            <li>Background check</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="text-align:center; margin-top: 1.5em; display: flex; flex-direction: column; gap: 0.5em; align-items: center;">
+                    <a href="https://thegrassapp.com/apply-driver" target="_blank" class="cta-button">Apply Now</a>
+                    <a href="mailto:drivers@thegrassapp.com" class="cta-button">Learn More</a>
+                    <p style="color:#ffb300; font-size:0.95em; margin-bottom:0.5em;">Note: PDFs will be downloaded to your device.</p>
+                </div>
+            </div>
+        `
     }
 };
 
@@ -526,92 +518,29 @@ const pageContent = {
 function showInfoCard(pageName) {
     removeExistingInfoCard();
 
-    const pageInfo = pageContent[pageName];
-    if (!pageInfo || !pageInfo.cards || !pageInfo.cards.length) return;
-
-    const cardInfo = pageInfo.cards[currentCardIndex];
+    const content = pageContent[pageName];
+    if (!content) return;
 
     // Create card container
     const card = document.createElement('div');
     card.className = `info-card ${pageName}-card`;
     if (pageName === 'aboutUs') card.classList.add('about-us-card');
-    
-    // Create and append icon/logo
-    if (cardInfo.icon) {
-        const iconContainer = document.createElement('div');
-        iconContainer.className = 'icon-container';
-        iconContainer.innerHTML = cardInfo.icon;
-        card.appendChild(iconContainer);
-    }
 
     // Create and append title
     const title = document.createElement('h2');
-    title.textContent = cardInfo.title;
+    title.textContent = content.title;
     card.appendChild(title);
 
     // Create content container
-    const content = document.createElement('div');
-    content.className = 'info-card-content';
+    const contentContainer = document.createElement('div');
+    contentContainer.className = 'info-card-content';
     
     // Add main content
-    const mainContent = document.createElement('p');
-    mainContent.textContent = cardInfo.content;
-    content.appendChild(mainContent);
+    const mainContent = document.createElement('div');
+    mainContent.innerHTML = content.content;
+    contentContainer.appendChild(mainContent);
 
-    // Add highlight section for About Us
-    if (cardInfo.highlight) {
-        const highlight = document.createElement('div');
-        highlight.className = 'about-us-highlight';
-        highlight.textContent = cardInfo.highlight;
-        content.appendChild(highlight);
-    }
-
-    // Add features section
-    if (cardInfo.features) {
-        const featureList = document.createElement('div');
-        featureList.className = 'feature-list';
-        
-        cardInfo.features.forEach(feature => {
-            const featureItem = document.createElement('div');
-            featureItem.className = 'feature-item';
-            featureItem.innerHTML = `
-                <span class="feature-icon">${feature.icon}</span>
-                <span>${feature.text}</span>
-            `;
-            featureList.appendChild(featureItem);
-        });
-        
-        content.appendChild(featureList);
-    }
-
-    // Add stats section for About Us
-    if (cardInfo.stats) {
-        const statsContainer = document.createElement('div');
-        statsContainer.className = 'about-us-stats';
-        
-        cardInfo.stats.forEach(stat => {
-            const statItem = document.createElement('div');
-            statItem.className = 'stat-item';
-            statItem.innerHTML = `
-                <div class="stat-number">${stat.number}</div>
-                <div class="stat-label">${stat.label}</div>
-            `;
-            statsContainer.appendChild(statItem);
-        });
-        
-        content.appendChild(statsContainer);
-    }
-
-    // Add CTA button
-    if (cardInfo.cta) {
-        const ctaButton = document.createElement('a');
-        ctaButton.href = cardInfo.cta.link;
-        ctaButton.className = 'cta-button';
-        ctaButton.textContent = cardInfo.cta.text;
-        content.appendChild(ctaButton);
-    }
-
-    card.appendChild(content);
+    card.appendChild(contentContainer);
 
     // Add close button
     const closeBtn = document.createElement('button');
@@ -815,6 +744,10 @@ function collapseNavPanel() {
 
     // Add click/touch handler to collapse panel when clicking/touching outside
     document.addEventListener('click', (e) => {
+        // Allow default action for .cta-button links (PDFs, external links, etc.)
+        if (e.target.closest('a.cta-button')) {
+            return;
+        }
         const navPanel = document.querySelector('.nav-panel');
         if (navPanel && !navPanel.contains(e.target)) {
             navPanel.classList.add('collapsed');

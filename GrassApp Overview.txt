@@ -1,0 +1,64 @@
+GrassApp: Context for PaymentCloud
+
+What is GrassApp?
+
+GrassApp is a marketplace facilitator that connects consumers with licensed dispensaries and smoke shops for cannabis and non-tobacco product delivery. GrassApp does not directly sell cannabis, tobacco, or non-tobacco paraphernalia, and it does not warehouse, package, or distribute any of the products it facilitates for delivery. Instead, GrassApp acts as a technology platform that provides dispensaries and smoke shops with an efficient, user-friendly way to reach customers. GrassApp may sell its own branded merchandise directly but is not involved in the physical handling of the cannabis or non-tobacco products it facilitates.
+
+How GrassApp Works
+
+Marketplace Facilitation
+
+GrassApp acts as a digital marketplace, allowing customers to browse and order products directly from licensed dispensaries and smoke shops.
+
+It provides a centralized platform for product listings, order placement, and real-time tracking, without maintaining inventory or fulfilling orders directly.
+
+Secure Transactions and Payment Processing
+
+GrassApp facilitates secure payment processing for transactions between customers and vendors.
+
+All payments are processed securely through a third-party payment gateway (e.g., PaymentCloud), ensuring compliance with financial regulations.
+
+GrassApp never holds or directly manages funds related to cannabis sales.
+
+Real-Time Order Management
+
+GrassApp provides vendors with a suite of tools for managing orders, including live inventory updates, driver assignment, and real-time delivery tracking.
+
+The platform ensures all orders are initiated by the customer and fulfilled by the vendor without GrassApp acting as the seller of record.
+
+Regulatory Compliance
+
+GrassApp operates strictly as a marketplace facilitator and adheres to all relevant state and federal regulations.
+
+The platform does not handle, package, or distribute cannabis or paraphernalia, focusing instead on connecting customers with licensed vendors.
+
+GrassApp only partners with businesses that hold the necessary licenses to operate in their respective jurisdictions.
+
+Key Benefits for Payment Processors
+
+Low Operational Risk: GrassApp does not maintain inventory or handle cannabis, reducing direct exposure to high-risk product categories.
+
+Transparent Financial Flow: All transactions are processed through established, compliant payment gateways, ensuring clear audit trails.
+
+Scalable Model: GrassApp’s marketplace approach allows for seamless scaling without the need for physical infrastructure.
+
+Enhanced Security: The platform uses advanced encryption, secure APIs, and multi-factor authentication to protect customer data.
+
+Next Steps for PaymentCloud Integration
+
+Payment Gateway Setup
+
+Establish secure API integrations for processing transactions.
+
+Implement fraud detection and chargeback protection mechanisms.
+
+Vendor Onboarding
+
+Ensure all participating dispensaries and smoke shops have valid licenses and meet compliance standards.
+
+Ongoing Compliance Monitoring
+
+Regular audits to ensure all transactions are conducted within regulatory frameworks.
+
+GrassApp is committed to providing a safe, secure, and compliant marketplace for connecting customers with licensed dispensaries and smoke shops, while maintaining a clear separation from direct product sales.
+
